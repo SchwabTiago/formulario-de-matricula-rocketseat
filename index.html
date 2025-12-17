@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="styles/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <title>Formulário de matrícula</title>
 </head>
 
@@ -26,6 +25,36 @@
                     Amanhã.
                 </p>
             </div>
+            <form>
+                <fieldset>
+                    <legend>Informação da criança</legend>
+                    <div>
+                        <label for="full-name">Nome completo</label>
+                        <input type="text" id="full-name" placeholder="Qual o nome da criança">
+                    </div>
+                    <div>
+                        <label for="birth">Data de nascimento</label>
+                        <input type="date" id="birth" lang="pt-BR">
+                    </div>
+                    <div class="select-wrapper">
+                        <label for="gender">Sexo</label>
+                        <select name="gender" id="gender">
+                            <option value="" disabled selected>Selecione o sexo</option>
+                            <option value="male">Masculino</option>
+                            <option value="female">Feminino</option>
+                            <option value="other">Prefiro não responder</option>
+                        </select>
+                    </div>
+                    <div class="text-area-wrapper">
+                        <label for="medical-conditions">Condições médicas especiais</label>
+                        <textarea id="medical-conditions"
+                            placeholder="Descreva qualquer condição médica especial"></textarea>
+                    </div>
+                    <div class="drop-area">
+                        <input type="file" id="birth-file">
+                    </div>
+                </fieldset>
+            </form>
         </main>
         <aside>
             <div class="aside-container">
