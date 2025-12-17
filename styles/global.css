@@ -36,6 +36,6 @@ h1,h2{
 	--support-pink: #F682A5;
 
 	--font-family: 'Poppins', sans-serif;
-	--text: 400rem 1rem/1.5rem var(--font-family);
-	--text-sm: 400rem 0.875rem/1.4rem var(--font-family);
+	--text: 400 1rem/1.5rem var(--font-family);
+	--text-sm: 400 0.875rem/1.4rem var(--font-family);
 }
