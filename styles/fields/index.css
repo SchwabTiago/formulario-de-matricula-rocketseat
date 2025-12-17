@@ -23,3 +23,18 @@ select:focus {
     border: .125rem solid var(--stroke-highlight);
     outline-offset: 1px;
 }
+
+input[type="date"] {
+    position: relative;
+
+    &::-webkit-calendar-picker-indicator {
+        position: absolute;
+        background: url(../../assets/icons/calendar-03.svg) center/contain;
+        right: 1rem;
+    }
+}
+
+select {
+    background: url(../../assets/icons/arrow-down-01.svg) no-repeat right 1rem center;
+    padding-right: 2.5rem;
+}
