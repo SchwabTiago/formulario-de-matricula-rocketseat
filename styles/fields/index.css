@@ -41,3 +41,24 @@ select {
     background: url(../../assets/icons/arrow-down-01.svg) no-repeat right 1rem center;
     padding-right: 2.5rem;
 }
+
+.input-wrapper {
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+    gap: 1.25rem;
+
+    & > div {
+        flex: 1;
+    }
+
+    & label {
+        width: 100%;
+    }
+}
+
+.flex-1 {
+    flex: 1;
+}
