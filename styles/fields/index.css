@@ -62,3 +62,10 @@ select {
 .flex-1 {
     flex: 1;
 }
+
+#street,
+#city,
+#state {
+    background-color: var(--surface-disabled);
+    color: var(--text-tertiary);
+}
