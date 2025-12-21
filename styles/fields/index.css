@@ -2,6 +2,8 @@
 
 input[type="text"],
 input[type="date"],
+input[type="email"],
+input[type="tel"],
 textarea,
 select {
     appearance: none;
@@ -50,7 +52,7 @@ select {
     display: flex;
     gap: 1.25rem;
 
-    & > div {
+    &>div {
         flex: 1;
     }
 
@@ -68,4 +70,191 @@ select {
 #state {
     background-color: var(--surface-disabled);
     color: var(--text-tertiary);
+}
+
+input {
+    &:invalid {
+        border: 0.125rem solid var(--semantic-error);
+    }
+
+    &+small {
+        font: var(--text-small);
+        display: inline-block;
+        margin-top: .25rem;
+    }
+
+    &[required]+.error {
+        display: flex;
+        align-items: center;
+        gap: .25rem;
+        font: var(--text-sm);
+        color: var(--semantic-error);
+
+        margin-top: .25rem;
+    }
+
+    &:valid+.error {
+        display: none;
+    }
+}
+
+/* Radio and Checkbox Styles */
+input[type="radio"],
+input[type="checkbox"] {
+    appearance: none;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    display: none;
+}
+
+.radio-group,
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.checkbox-group {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.radio-option,
+.checkbox-option {
+    position: relative;
+}
+
+.radio-label,
+.checkbox-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1.5rem 1rem;
+    border: 2px dashed var(--stroke-default);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: border-color 0.2s;
+    font: var(--text-sm);
+    color: var(--text-secondary);
+    position: relative;
+    user-select: none;
+
+    & img {
+        width: 3rem;
+        height: 3rem;
+        pointer-events: none;
+    }
+}
+
+input[type="radio"]:checked + .radio-label,
+input[type="checkbox"]:checked + .checkbox-label {
+    border: 2px dashed var(--brand-mid);
+    background-color: transparent;
+    color: var(--text-primary);
+}
+
+input[type="radio"]:checked + .radio-label::before,
+input[type="checkbox"]:checked + .checkbox-label::before {
+    content: '';
+    display: none;
+}
+
+input[type="radio"]:checked + .radio-label::after,
+input[type="checkbox"]:checked + .checkbox-label::after {
+    content: '';
+}
+
+.options-section {
+    display: grid;
+    gap: 2rem;
+}
+
+.options-section > div > label {
+    margin-bottom: 0.75rem;
+}
+
+.checkbox-agreement {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-top: 2rem;
+
+    & input[type="checkbox"] {
+        appearance: none;
+        width: 0;
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: none;
+        display: none;
+    }
+
+    & input[type="checkbox"]:checked {
+        background-color: transparent;
+        border-color: transparent;
+    }
+
+    & input[type="checkbox"]:checked::after {
+        content: '';
+    }
+
+    & label {
+        display: block;
+        font: var(--text-sm);
+        color: var(--text-secondary);
+        margin: 0;
+        cursor: pointer;
+        user-select: none;
+
+        & a {
+            color: var(--brand-mid);
+            text-decoration: none;
+            font-weight: 600;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 3rem;
+    justify-content: center;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    font: 600 1rem/1.5 var(--font-family);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background-color: var(--brand-mid);
+    color: white;
+
+    &:hover {
+        background-color: var(--brand-dark);
+    }
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--brand-mid);
+    border: 1px solid var(--brand-mid);
+
+    &:hover {
+        background-color: var(--surface-secondary);
+    }
 }
