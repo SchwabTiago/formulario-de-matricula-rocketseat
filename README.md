@@ -1,4 +1,4 @@
-# 👦 Farmulario de matricula
+# 👦 Formulario de matricula
 
 **Formulário de Matrícula – Escola de Educação Infantil** é uma aplicação web moderna desenvolvida para **simplificar e organizar o processo de inscrição escolar**. O projeto prioriza **usabilidade**, **clareza na coleta de dados** e **feedback visual imediato**, garantindo uma experiência segura e intuitiva para os responsáveis.
 
