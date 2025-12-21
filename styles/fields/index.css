@@ -1,4 +1,7 @@
-input,
+@import './droparea.css';
+
+input[type="text"],
+input[type="date"],
 textarea,
 select {
     appearance: none;
