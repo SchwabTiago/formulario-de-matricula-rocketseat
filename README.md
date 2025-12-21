@@ -19,6 +19,6 @@ O layout apresenta:
 
 ---
 
-![Farmulario de Matricula Preview](./img/assets/project-img.png)
+![Farmulario de Matricula Preview](./assets/image/project-img.png)
 
 ---
